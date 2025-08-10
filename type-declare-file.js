@@ -1,4 +1,4 @@
-//js源代码文件
+// 类型声明文件演示， js源代码文件
 
 export function add(a, b) {
   return a + b;
