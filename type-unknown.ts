@@ -37,19 +37,19 @@ function showTypeUnknownDemo1() {
 function showTypeUnknownDemo2() {
   let str1: string;
   str1 = "hello";
-  str1.toUpperCase(); // 无警告
+  str1.toUpperCase(); // 无报错
 
   let str2: any;
   str2 = "hello";
-  str2.toUpperCase; // 无警告
-  str2.abc;         // 即便属性不存在，也不会有任何警告
-  str2.fff;         // 即便属性不存在，也不会有任何警告
+  str2.toUpperCase; // 无报错
+  str2.abc;         // 即便属性不存在，也不会有任何报错
+  str2.fff;         // 即便属性不存在，也不会有任何报错
 
   let str3: unknown;
   str3 = "hello";
-  // str3.toUpperCase(); // 警告：类型“unknown” 上不存在函数 “toUpperCase”
-  // str3.abc;           // 警告：类型“unknown”上不存在属性“abc”
-  // str3.fff;           // 警告：类型“unknown”上不存在属性“fff”
+  // str3.toUpperCase(); // 报错：类型“unknown” 上不存在函数 “toUpperCase”
+  // str3.abc;           // 报错：类型“unknown”上不存在属性“abc”
+  // str3.fff;           // 报错：类型“unknown”上不存在属性“fff”
 
   (str3 as string).toUpperCase(); // 强制类型转换后，可以调用具体类型的属性、方法了
 }

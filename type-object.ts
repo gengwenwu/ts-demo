@@ -44,6 +44,6 @@ function showObjectDemo() {
   b = true; // Boolean
   b = "你好"; // String
 
-  // b = null;  // 编译报错，null 不能调用 Object 方法，所以不能赋值给 Object
+  // b = null;      // 编译报错，null 不能调用 Object 方法，所以不能赋值给 Object
   // b = undefined; // 编译报错，原因如上
 }
