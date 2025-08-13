@@ -68,7 +68,7 @@ function Validate(maxValue: number) {
     descriptor: PropertyDescriptor
   ) {
     // 1，存储原始方法
-    const originnal = descriptor.value;
+    const original = descriptor.value;
     // 2，替换原始方法
     descriptor.value = function (...args: any[]) {
       // (1), 验证参数
@@ -76,7 +76,7 @@ function Validate(maxValue: number) {
         throw new Error("年龄非法");
       }
       // (2)，调用原始方法
-      return originnal.apply(this, args);
+      return original.apply(this, args);
     };
   };
 }

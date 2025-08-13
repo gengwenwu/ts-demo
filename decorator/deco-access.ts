@@ -7,7 +7,7 @@
  *
  * @param target      - 对于实例访问器来说，target是类的原型对象；对于静态访问器来说，target是类。类的原型对象是一个对象, 类的原型对象上有类的所有属性和方法。object 类型。
  * @param propertyKey - 访问器的名称。
- * @param descriptor  - 方法的描述对象。
+ * @param descriptor  - 访问器描述对象。
  */
 function Demo5(
   target: object,
